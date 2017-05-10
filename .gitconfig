@@ -1,0 +1,22 @@
+[user]
+	name = DylanDerwael
+	email = dylan.derwael@vikingco.com
+[merge]
+	tool = meld
+[alias]
+	url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"'
+	cp = cherry-pick
+	st = status -s
+	cl = clone
+	co = commit
+	ch = checkout
+	br = branch 
+	diff = diff --word-diff
+	dc = diff --cached
+	grep = grep -Ii
+	f = "!git ls-files | grep -i"
+	dl = "!git ll -1"
+	dlc = diff --cached HEAD^
+	fl = log -u
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
